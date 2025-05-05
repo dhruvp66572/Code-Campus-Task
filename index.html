@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Rotating Wheel</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .wheel-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;            
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);            
+            margin: 0 auto;
+        }
+
+        .wheel {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(
+                red 0% 25%,
+                green 25% 50%,
+                yellow 50% 75%,
+                blue 75% 100%
+            );
+            transition: transform 2.5s ease-in-out;
+        }
+
+        .inner-circle {
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 50%;
+            height: 50%;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .wheel-container:hover .wheel {
+            transform: rotate(1000deg);
+        }
+
+        .header {
+            display: block;
+            margin: 0 auto;
+        }       
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Campus Code</h1>
+        <h2>Task: Create a Rotating Wheel</h2>        
+    </div>
+    <div class="wheel-container">
+        <div class="wheel"></div>
+        <div class="inner-circle"></div>
+    </div>
+</body>
+</html>
